@@ -25,6 +25,4 @@ One of the early developers of [AlmaLinux OS](https://almalinux.org) and co-auth
 
 ---
 
-![](./profile/pin-mirrors.svg)
-
 <sub>ZelGray · Cherkasy, Ukraine</sub>
