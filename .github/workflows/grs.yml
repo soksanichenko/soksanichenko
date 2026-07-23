@@ -39,6 +39,15 @@ jobs:
           path: profile/pin-mirrors.svg
           token: ${{ secrets.GRS_TOKEN }}
 
+      - name: Debug GRS_TOKEN identity
+        env:
+          GH_TOKEN: ${{ secrets.GRS_TOKEN }}
+        run: |
+          echo "Token belongs to:"
+          gh api user --jq .login
+          echo "Permissions on repo:"
+          gh api repos/${{ github.repository }} --jq .permissions
+
       - name: Commit cards via GitHub API
         env:
           GH_TOKEN: ${{ secrets.GRS_TOKEN }}
