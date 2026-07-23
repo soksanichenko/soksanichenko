@@ -41,7 +41,7 @@ jobs:
 
       - name: Commit cards via GitHub API
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GRS_TOKEN }}
         run: |
           REPO="${{ github.repository }}"
           CHANGED=$(git diff --name-only HEAD -- profile/)
